@@ -1,6 +1,11 @@
 from zxcvbn.scoring import START_UPPER, ALL_UPPER
-from gettext import gettext as _
+from gettext import dgettext, bindtextdomain
+import os, sys
 
+_DOMAIN = 'zxcvbn'
+_INSTALL_DIR_LOCALEDIR=os.path.join(sys.prefix, 'share','locale')
+bindtextdomain(_DOMAIN, _INSTALL_DIR_LOCALEDIR)
+_ = lambda x: dgettext(_DOMAIN, x)
 
 def get_feedback(score, sequence):
     if len(sequence) == 0:
