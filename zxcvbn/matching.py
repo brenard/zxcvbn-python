@@ -21,6 +21,7 @@ add_frequency_lists(FREQUENCY_LISTS)
 
 GRAPHS = {
     'qwerty': adjacency_graphs.ADJACENCY_GRAPHS['qwerty'],
+    'azerty': adjacency_graphs.ADJACENCY_GRAPHS['azerty'],
     'dvorak': adjacency_graphs.ADJACENCY_GRAPHS['dvorak'],
     'keypad': adjacency_graphs.ADJACENCY_GRAPHS['keypad'],
     'mac_keypad': adjacency_graphs.ADJACENCY_GRAPHS['mac_keypad'],
