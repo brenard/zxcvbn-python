@@ -51,8 +51,10 @@ def parse_frequency_lists(data_dir):
         token_to_rank = {}
         with codecs.open(os.path.join(data_dir, filename), 'r', 'utf8') as f:
             for i, line in enumerate(f):
+                token = line.split()[0].lower()
+                if token in token_to_rank:
+                    continue
                 rank = i + 1  # rank starts at 1
-                token = line.split()[0]
                 token_to_rank[token] = rank
         freq_lists[freq_list_name] = token_to_rank
     for freq_list_name in DICTIONARIES:
