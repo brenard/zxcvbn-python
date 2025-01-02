@@ -185,6 +185,17 @@ def test_dictionary_matching():
         'dictionary_name': ['us_tv_and_film'],
     })
 
+    # test french dictionary
+    matches = matching.dictionary_match('été')
+    patterns = ['été']
+    ijs = [[0, 2]]
+    msg = "default dictionaries"
+    check_matches(msg, matches, 'dictionary', patterns, ijs, {
+        'matched_word': patterns,
+        'rank': [29],
+        'dictionary_name': ['french_wikipedia'],
+    })
+
 
 def test_reverse_dictionary_matching():
     test_dicts = {
