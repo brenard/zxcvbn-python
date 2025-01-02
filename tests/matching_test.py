@@ -452,6 +452,7 @@ def test_regex_matching():
     for pattern, name in [
         ['1922', 'recent_year'],
         ['2017', 'recent_year'],
+        ['2022', 'recent_year'],
     ]:
         matches = matching.regex_match(pattern)
         msg = "matches #{pattern} as a #{name} pattern"

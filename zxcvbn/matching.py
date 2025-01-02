@@ -42,7 +42,7 @@ L33T_TABLE = {
 }
 
 REGEXEN = {
-    'recent_year': re.compile(r'19\d\d|200\d|201\d'),
+    'recent_year': re.compile(r'19\d\d|20\d\d'),
 }
 
 DATE_MAX_YEAR = 2050
